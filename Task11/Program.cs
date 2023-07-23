@@ -5,10 +5,10 @@ int thirdDigit = number % 10;
 int resultDigit = firstDigit * 10 + thirdDigit;
 Console.WriteLine($"Ответ: {resultDigit}");
 
-int result = RemoveSeconDigit(number);
+int result = RemoveSecondDigit(number);
 Console.WriteLine($"Ответ: {result}");
 
-int RemoveSeconDigit (int num)
+int RemoveSecondDigit (int num)
 {
 int firstDigit = num / 100;
 int thirdDigit = num % 10;

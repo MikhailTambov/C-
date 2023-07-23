@@ -7,10 +7,10 @@ Console.WriteLine ($"Случайное число от 10 до 99 -> {number}")
 
 int maxDigit = MaxDigit(number);
 Console.WriteLine($"Максимальная цифра числа - {maxDigit}");
-int maxDigit1 = MaxDigit(56);
-Console.WriteLine($"Максимальная цифра числа - {maxDigit1}");
-int maxDigit2 = MaxDigit(89);
-Console.WriteLine($"Максимальная цифра числа - {maxDigit2}");
+// int maxDigit1 = MaxDigit(56);
+// Console.WriteLine($"Максимальная цифра числа - {maxDigit1}");
+// int maxDigit2 = MaxDigit(89);
+// Console.WriteLine($"Максимальная цифра числа - {maxDigit2}");
 
 
 int MaxDigit (int num)  
