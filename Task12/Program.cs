@@ -9,5 +9,7 @@ int IsMultiplicity (int firstNumber, int secondNumber)
 }
 
 int reminder = IsMultiplicity(firstNum, secondNum);
-if (reminder == 0) Console.Write("кратно");
-else Console.Write($"не кратно, остаток деления {reminder}");
+// if (reminder == 0) Console.Write("кратно");
+// else Console.Write($"не кратно, остаток деления {reminder}");
+
+Console.Write(reminder == 0 ? "кратно" : $"не кратно, остаток {reminder}");
