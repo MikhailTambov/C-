@@ -1,13 +1,14 @@
-﻿Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+﻿
+Console.WriteLine("Введите первое число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
 
-int div = number % 2;
+Console.WriteLine("Введите второе число: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-if(div == 0)
+bool num = IsSquareTwoNumbers(firstNumber, secondNumber);
+Console.WriteLine(num ? "Да": "Нет"); 
+
+bool IsSquareTwoNumbers (int firstNum, int secondNum)
 {
-    Console.WriteLine("Да");
-}
-else
-{
-    Console.WriteLine("Нет");
+    return  firstNum == secondNum * secondNum || secondNum == firstNum * firstNum;
 }
