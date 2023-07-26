@@ -4,7 +4,6 @@ int number = Convert.ToInt32(Console.ReadLine());
 int len = NumberLen(number);
 SumNumbers(number, len);
 
-// Функция подсчета цифр в числе
 int NumberLen(int a)
 {
     int index = 0;
