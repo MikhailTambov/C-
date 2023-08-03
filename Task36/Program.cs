@@ -5,7 +5,7 @@ int[] array = CreateArrayRndInt(size, 1, 1000);
 PrintArray(array);
 
 
-for (int arr = 0; arr < array.Length; arr += 2)
+for (int arr = 1; arr < array.Length; arr += 3)
     sum = sum + array[arr];
 
 Console.WriteLine($"Cумма элементов на нечётных позициях = {sum}");
