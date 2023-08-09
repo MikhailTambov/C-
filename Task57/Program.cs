@@ -1,0 +1,86 @@
+﻿int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+{
+    int[,] matrix = new int[rows, columns];
+
+    Random rnd = new Random();
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = rnd.Next(min, max + 1);
+        }
+
+    }
+    return matrix;
+}
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("|");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j],4} ");
+        }
+        Console.WriteLine("|");
+    }
+
+
+
+}
+
+int[] MatrixToArray(int[,] matrix)
+{
+    int[] array = new int[matrix.Length];
+    int c = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            array[c] = matrix[i, j];
+            c++;
+        }
+    }
+    return array;
+}
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
+    }
+    Console.WriteLine("]");
+
+}
+
+void FrequencyDictionary(int[] arr)
+{
+    int currentNum = arr[0];
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] == currentNum) count++;
+        else
+        {
+            Console.WriteLine($"{currentNum} содержится {count} раз");
+            count = 1;
+            currentNum = arr[i];
+        }
+
+    }
+    Console.WriteLine($"{currentNum} содержится {count} раз");
+}
+int[,] array2d = CreateMatrixRndInt(3, 4, 1, 9);
+PrintMatrix(array2d);
+
+int[] arrMain = MatrixToArray(array2d);
+Console.WriteLine();
+PrintArray(arrMain);
+Array.Sort(arrMain);
+Console.WriteLine();
+PrintArray(arrMain);
+Console.WriteLine();
+FrequencyDictionary(arrMain);
